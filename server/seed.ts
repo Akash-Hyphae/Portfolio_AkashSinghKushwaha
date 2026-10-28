@@ -1,0 +1,501 @@
+import bcrypt from 'bcryptjs';
+import {
+  ProfileData,
+  SkillItem,
+  ProjectItem,
+  DSAData,
+  AchievementItem,
+  CertificationItem,
+  ExperienceItem,
+  ResumeData,
+  SiteSettings,
+  AdminUser,
+} from '../src/types/portfolio';
+
+export const getInitialSeedData = () => {
+  // Initial default admin password: 'Admin@2026#Akash'
+  const salt = bcrypt.genSaltSync(10);
+  const defaultAdminHash = bcrypt.hashSync(process.env.ADMIN_PASSWORD || 'Admin@2026#Akash', salt);
+
+  const adminUsers: AdminUser[] = [
+    {
+      id: 'admin_1',
+      email: process.env.ADMIN_EMAIL || 'akashsinghkushwaha.it27@gmail.com',
+      passwordHash: defaultAdminHash,
+      name: 'Akash Singh Kushwaha',
+      role: 'admin',
+      createdAt: new Date().toISOString(),
+      lastLogin: new Date().toISOString(),
+    },
+  ];
+
+  const profile: ProfileData = {
+    name: 'Akash Singh Kushwaha',
+    headline: 'Full-Stack Developer | MERN Stack | AI-Powered Applications',
+    heroTagline: 'Building products that solve real problems — from full-stack platforms to AI-powered applications.',
+    summary:
+      'Information Technology undergraduate with hands-on experience building and deploying full-stack applications using the MERN stack. Experienced in developing REST APIs, JWT authentication, payment integrations, database-driven applications, and AI-powered learning platforms. Strong foundation in Java, Data Structures and Algorithms, DBMS, and software engineering.',
+    degree: 'B.Tech in Information Technology',
+    institution: 'Jaipur Engineering College and Research Center Foundation, Jaipur',
+    expectedGraduation: '2027',
+    cgpa: '8.13/10',
+    email: 'akashsinghkushwaha.it27@gmail.com',
+    phone: '+91-6376037378',
+    phonePublic: true,
+    location: 'Jaipur, Rajasthan, India',
+    availabilityStatus: 'Open to Internships & Opportunities',
+    avatarUrl: '',
+    socialLinks: {
+      linkedin: 'https://linkedin.com/in/akashsinghkushwaha',
+      github: 'https://github.com/akashsinghkushwaha',
+      leetcode: 'https://leetcode.com/akashsinghkushwaha',
+      gfg: 'https://geeksforgeeks.org/user/akashsinghkushwaha',
+      youtube: '',
+    },
+    currentlyLearning: [
+      'System Design & Microservices Architecture',
+      'Next.js 15 & High-Performance Full-Stack Patterns',
+      'Autonomous LLM Agent Architectures & Tool Calling',
+      'Containerization with Docker & CI/CD Pipelines',
+    ],
+    areasOfInterest: [
+      'Full-stack web development',
+      'AI-powered applications',
+      'Backend engineering',
+      'Problem-solving and algorithms',
+      'Building useful products for real users',
+    ],
+    personalInterests: [
+      'Table tennis (State-level player & 13 tournament medals)',
+      'Competitive gaming & esports tournament design',
+      'Exploring novel web frameworks and AI tools',
+    ],
+  };
+
+  const skills: SkillItem[] = [
+    // Programming Languages
+    { id: 'sk_1', name: 'Java', category: 'Programming Languages', featured: true, visible: true, order: 1 },
+    { id: 'sk_2', name: 'JavaScript', category: 'Programming Languages', featured: true, visible: true, order: 2 },
+
+    // Frontend Development
+    { id: 'sk_3', name: 'React.js', category: 'Frontend Development', featured: true, visible: true, order: 3 },
+    { id: 'sk_4', name: 'HTML5', category: 'Frontend Development', featured: false, visible: true, order: 4 },
+    { id: 'sk_5', name: 'CSS3', category: 'Frontend Development', featured: false, visible: true, order: 5 },
+    { id: 'sk_6', name: 'JavaScript ES6+', category: 'Frontend Development', featured: true, visible: true, order: 6 },
+    { id: 'sk_7', name: 'Tailwind CSS', category: 'Frontend Development', featured: true, visible: true, order: 7 },
+    { id: 'sk_8', name: 'Material UI', category: 'Frontend Development', featured: false, visible: true, order: 8 },
+
+    // Backend Development
+    { id: 'sk_9', name: 'Node.js', category: 'Backend Development', featured: true, visible: true, order: 9 },
+    { id: 'sk_10', name: 'Express.js', category: 'Backend Development', featured: true, visible: true, order: 10 },
+    { id: 'sk_11', name: 'REST APIs', category: 'Backend Development', featured: true, visible: true, order: 11 },
+    { id: 'sk_12', name: 'JWT Authentication', category: 'Backend Development', featured: true, visible: true, order: 12 },
+
+    // Databases
+    { id: 'sk_13', name: 'MongoDB', category: 'Databases', featured: true, visible: true, order: 13 },
+    { id: 'sk_14', name: 'MySQL', category: 'Databases', featured: true, visible: true, order: 14 },
+    { id: 'sk_15', name: 'SQL', category: 'Databases', featured: false, visible: true, order: 15 },
+
+    // Core Computer Science
+    { id: 'sk_16', name: 'Data Structures and Algorithms', category: 'Core Computer Science', featured: true, visible: true, order: 16 },
+    { id: 'sk_17', name: 'Object-Oriented Programming', category: 'Core Computer Science', featured: true, visible: true, order: 17 },
+    { id: 'sk_18', name: 'Database Management Systems', category: 'Core Computer Science', featured: true, visible: true, order: 18 },
+    { id: 'sk_19', name: 'Operating Systems', category: 'Core Computer Science', featured: false, visible: true, order: 19 },
+
+    // Tools and Platforms
+    { id: 'sk_20', name: 'Git', category: 'Tools and Platforms', featured: true, visible: true, order: 20 },
+    { id: 'sk_21', name: 'GitHub', category: 'Tools and Platforms', featured: true, visible: true, order: 21 },
+    { id: 'sk_22', name: 'Postman', category: 'Tools and Platforms', featured: true, visible: true, order: 22 },
+    { id: 'sk_23', name: 'Netlify', category: 'Tools and Platforms', featured: false, visible: true, order: 23 },
+    { id: 'sk_24', name: 'Render', category: 'Tools and Platforms', featured: false, visible: true, order: 24 },
+
+    // AI and Integrations
+    { id: 'sk_25', name: 'Gemini API', category: 'AI and Integrations', featured: true, visible: true, order: 25 },
+    { id: 'sk_26', name: 'AI-Powered Application Development', category: 'AI and Integrations', featured: true, visible: true, order: 26 },
+  ];
+
+  const projects: ProjectItem[] = [
+    {
+      id: 'proj_1',
+      slug: 'handloom-house',
+      title: 'Handloom House — Full-Stack E-commerce Platform',
+      category: 'Full-Stack Development',
+      subtitle: 'Production-ready MERN e-commerce application developed for a paying client.',
+      description:
+        'A production-ready MERN e-commerce application developed for a paying client, supporting product catalog management, dynamic filtering, cart operations, order management, and online payments.',
+      period: 'August 2025 – November 2025',
+      clientWork: true,
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Razorpay', 'Tailwind CSS', 'JWT'],
+      liveUrl: 'https://handloomhouse.example.com',
+      githubUrl: 'https://github.com/akashsinghkushwaha/handloom-house-client',
+      isFeatured: true,
+      status: 'published',
+      order: 1,
+      caseStudy: {
+        problemStatement:
+          'Local textile artisans and handloom weavers lacked an accessible direct-to-consumer digital commerce channel. Their existing manual order flow suffered from inconsistent inventory tracking, slow customer communication, and no secure digital payment mechanism.',
+        objectives: [
+          'Support an interactive catalog displaying 100+ artisan textile and garment products.',
+          'Build 15+ secure REST APIs with high data integrity and sub-100ms response targets.',
+          'Integrate Razorpay payment gateway with cryptographic HMAC-SHA256 signature verification.',
+          'Provide a route-protected administrative dashboard for orders, dispatch status, and product updates.',
+        ],
+        solutionOverview:
+          'Engineered a comprehensive MERN platform with rich client-side browsing, dynamic fabric and price filters, real-time cart persistence, automated Razorpay modal payments, and an admin command center for order lifecycle processing.',
+        technicalArchitecture:
+          'A decoupled React SPA communicates with an Express.js server connected to MongoDB. Incoming requests pass through JWT verification, body sanitization, and structured route controllers. Payment webhooks trigger transactional database updates only after cryptographically validating the SHA256 digest.',
+        keyDecisions: [
+          'Implemented cryptographic HMAC-SHA256 verification directly on the server to prevent forged payment callbacks.',
+          'Utilized compound indexes in MongoDB for instantaneous category and price range query execution across 100+ items.',
+          'Engineered route-protected admin middleware separating public shoppers from back-office fulfillment operations.',
+        ],
+        challengesAndSolutions:
+          'Challenge: Managing payment synchronization when shoppers closed the browser window before the confirmation redirect.\nSolution: Implemented server-side payment capture verification webhooks with idempotent database states, preventing double charging or lost orders.',
+        verifiedFeatures: [
+          'Support for a catalog of 100+ products',
+          '15+ Express.js REST APIs',
+          'MongoDB-backed application data',
+          'Razorpay payment integration',
+          'HMAC-SHA256 signature verification',
+          'Route-protected administrative dashboard',
+          'Order tracking',
+        ],
+        futureImprovements: [
+          'Automated WhatsApp shipping notifications for buyers upon dispatch',
+          'Multi-currency checkout for international handloom collectors',
+          'Automated stock depletion warning alerts for store administrators',
+        ],
+      },
+      createdAt: '2025-11-20T10:00:00.000Z',
+      updatedAt: '2025-11-20T10:00:00.000Z',
+    },
+    {
+      id: 'proj_2',
+      slug: 'play4glory',
+      title: 'Play4Glory — Esports Tournament Management Platform',
+      category: 'Full-Stack Development / Gaming',
+      subtitle: 'Full-stack esports platform for tournament brackets, digital wallets, and match progression.',
+      description:
+        'A full-stack esports platform designed to manage tournaments, teams, match progression, digital wallet operations, and tournament scoring.',
+      period: 'December 2025 – Present',
+      clientWork: false,
+      technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'JWT', 'Razorpay', 'Tailwind CSS'],
+      liveUrl: 'https://play4glory.example.com',
+      githubUrl: 'https://github.com/akashsinghkushwaha/play4glory-platform',
+      isFeatured: true,
+      status: 'published',
+      order: 2,
+      caseStudy: {
+        problemStatement:
+          'Grassroots esports organizers rely on chaotic messaging apps and spreadsheets, causing disputed match outcomes, delayed bracket advancement, and manual payment calculation errors.',
+        objectives: [
+          'Automate 64-team single-elimination tournament bracket generation with recursive match trees.',
+          'Provide a dual-portal architecture with Role-Based Access Control (RBAC) for players and referees.',
+          'Implement a digital wallet with audited ledger transactions, deposit verification, and administrative withdrawal approvals.',
+        ],
+        solutionOverview:
+          'Architected an end-to-end tournament hub where teams register, stake entry fees via integrated wallets, follow dynamic bracket progression, submit match results with screenshot attachments, and view live MVP leaderboards.',
+        technicalArchitecture:
+          'Express.js backend utilizing recursive tree algorithms for bracket generation and node traversal. MongoDB schema with atomic balance operations for digital wallets. React frontend rendering interactive tournament brackets with responsive pan/zoom visualization.',
+        keyDecisions: [
+          'Employed recursive tree traversal logic to handle 64-team seedings, automatic bye allocations, and round advancement.',
+          'Created double-entry ledger mechanics for digital wallets, ensuring every credit and debit is immutable and traceable.',
+          'Structured strict RBAC middleware preventing unauthorized match score overrides.',
+        ],
+        challengesAndSolutions:
+          'Challenge: Preventing score disputes and duplicate submissions from competing team captains.\nSolution: Built a dispute-lock state requiring mutual confirmation or human admin review with uploaded screenshot proof.',
+        verifiedFeatures: [
+          'Dual-portal application',
+          'JWT authentication',
+          'Role-Based Access Control',
+          'Automated 64-team knockout bracket generation',
+          'Recursive match-tree logic',
+          'Digital wallet and transaction ledger',
+          'Razorpay deposit verification',
+          'Administrative UPI withdrawal approvals',
+          'MVP leaderboard calculations',
+        ],
+        futureImprovements: [
+          'Automated Discord bot webhook integration for instant match lobby announcements',
+          'Live spectator bracket widget for Twitch and YouTube live streaming',
+          'Team captain voice chat lobby integration',
+        ],
+      },
+      createdAt: '2026-01-15T10:00:00.000Z',
+      updatedAt: '2026-01-15T10:00:00.000Z',
+    },
+    {
+      id: 'proj_3',
+      slug: 'pathlytic-ai',
+      title: 'Pathlytic AI — AI-Powered Learning and Career Roadmaps',
+      category: 'Artificial Intelligence / Full-Stack Development',
+      subtitle: 'AI-powered mentoring platform that generates personalized learning roadmaps based on career goals.',
+      description:
+        'An AI-powered mentoring platform that generates personalized learning roadmaps based on career goals, academic background, skill confidence, and deadlines.',
+      period: 'May 2026 – Present',
+      clientWork: false,
+      technologies: ['MERN stack', 'Gemini API', 'Power BI', 'React', 'Node.js', 'Tailwind CSS'],
+      liveUrl: 'https://pathlytic-ai.example.com',
+      githubUrl: 'https://github.com/akashsinghkushwaha/pathlytic-ai',
+      isFeatured: true,
+      status: 'published',
+      order: 3,
+      caseStudy: {
+        problemStatement:
+          'Students and early-career developers struggle with fragmented learning resources and tutorial hell, lacking an objective, timeline-aware roadmap tailored to their actual baseline skills and target job roles.',
+        objectives: [
+          'Build an intelligent multi-step onboarding wizard gathering user aspirations, hours per week, and skill confidence.',
+          'Integrate Google Gemini API with schema enforcement to synthesize actionable week-by-week roadmaps.',
+          'Track student progress with milestone checklists, gamified experience points (XP), and Power BI embedded analytics.',
+        ],
+        solutionOverview:
+          'Pathlytic AI analyzes student inputs and produces structured, adaptive weekly milestones with curated project challenges, knowledge assessments, and progress velocity tracking.',
+        technicalArchitecture:
+          'Express backend communicating with the @google/genai SDK, passing rigorous JSON schema constraints to guarantee valid roadmap structures. MongoDB stores roadmap graphs and user progress states. Power BI reports deliver comprehensive study pace analytics.',
+        keyDecisions: [
+          'Enforced structured JSON responses from Gemini to eliminate parsing inconsistencies and avoid hallucinations.',
+          'Introduced an XP and milestone progression model to increase learner motivation and retention.',
+          'Integrated Power BI visual dashboards for deep insights into study duration and topic completion trends.',
+        ],
+        challengesAndSolutions:
+          'Challenge: Large prompt token overhead when generating detailed 12-week comprehensive curriculums.\nSolution: Architected modular generational chunking, synthesizing foundational roadmap stages immediately and streaming extended milestones progressively.',
+        verifiedFeatures: [
+          'Personalized week-by-week learning roadmaps',
+          'Gemini API integration',
+          'Multi-step onboarding wizard',
+          'MongoDB-backed application data',
+          'Progress dashboard',
+          'Task completion tracking',
+          'Experience points tracking',
+          'Analytics integration with Power BI',
+        ],
+        futureImprovements: [
+          'AI resume analyzer that checks curriculum milestones against real-time job openings',
+          'Peer study pods with shared sprint challenges and leaderboards',
+        ],
+      },
+      createdAt: '2026-05-20T10:00:00.000Z',
+      updatedAt: '2026-05-20T10:00:00.000Z',
+    },
+  ];
+
+  const dsa: DSAData = {
+    totalSolved: 400,
+    leetCodeSolved: 240,
+    gfgSolved: 160,
+    lastUpdated: 'October 2026',
+    leetCodeUrl: 'https://leetcode.com/akashsinghkushwaha',
+    gfgUrl: 'https://geeksforgeeks.org/user/akashsinghkushwaha',
+    topics: [
+      { id: 't_1', name: 'Arrays', completed: 65, target: 75, status: 'Mastered', notes: 'Prefix sum, sliding window, two pointers, Dutch National Flag algorithm' },
+      { id: 't_2', name: 'Strings', completed: 45, target: 50, status: 'Proficient', notes: 'KMP algorithm, Rabin-Karp, anagrams, palindrome partitioning' },
+      { id: 't_3', name: 'Hashing', completed: 40, target: 45, status: 'Mastered', notes: 'Hash tables, frequency maps, collision handling, rolling hash' },
+      { id: 't_4', name: 'Binary Search', completed: 35, target: 40, status: 'Proficient', notes: 'Rotated arrays, lower/upper bounds, answer space search' },
+      { id: 't_5', name: 'Recursion & Backtracking', completed: 30, target: 35, status: 'In Progress', notes: 'Subsets, permutations, N-Queens problem, sudoku solver' },
+      { id: 't_6', name: 'Linked Lists', completed: 30, target: 30, status: 'Mastered', notes: 'Fast/slow pointers, in-place reversal, cycle detection, LRU integration' },
+      { id: 't_7', name: 'Stacks and Queues', completed: 35, target: 40, status: 'Proficient', notes: 'Monotonic stack, next greater element, circular queues, sliding window max' },
+      { id: 't_8', name: 'Trees', completed: 45, target: 55, status: 'In Progress', notes: 'Binary tree traversals, BST validation, LCA, diameter, path sum problems' },
+      { id: 't_9', name: 'Graphs', completed: 30, target: 45, status: 'In Progress', notes: 'BFS, DFS, Dijkstra, Kahn’s topological sort, union find' },
+      { id: 't_10', name: 'Dynamic Programming', completed: 25, target: 40, status: 'Learning', notes: '0/1 Knapsack, Longest Common Subsequence, Grid paths, Coin Change' },
+      { id: 't_11', name: 'Greedy Algorithms', completed: 20, target: 25, status: 'Proficient', notes: 'Activity selection, interval scheduling, fractional knapsack' },
+      { id: 't_12', name: 'Heaps & Priority Queues', completed: 15, target: 20, status: 'Proficient', notes: 'Top-K elements, stream median, merge K sorted lists' },
+      { id: 't_13', name: 'Tries', completed: 10, target: 15, status: 'Learning', notes: 'Prefix queries, autocomplete, Word Search II, bitwise XOR trie' },
+    ],
+    featuredProblems: [
+      {
+        id: 'fp_1',
+        title: 'LRU Cache',
+        platform: 'LeetCode',
+        difficulty: 'Medium',
+        topic: 'Stacks & Queues / Design',
+        url: 'https://leetcode.com/problems/lru-cache/',
+        notes: 'Doubly linked list combined with hash map for guaranteed O(1) get and put time complexity.',
+        solutionUrl: 'https://github.com/akashsinghkushwaha/dsa-solutions/tree/main/lru-cache',
+      },
+      {
+        id: 'fp_2',
+        title: 'Course Schedule II',
+        platform: 'LeetCode',
+        difficulty: 'Medium',
+        topic: 'Graphs',
+        url: 'https://leetcode.com/problems/course-schedule-ii/',
+        notes: 'Topological sorting using Kahn algorithm with in-degree array to resolve cyclic dependencies.',
+        solutionUrl: 'https://github.com/akashsinghkushwaha/dsa-solutions/tree/main/course-schedule',
+      },
+      {
+        id: 'fp_3',
+        title: 'Trapping Rain Water',
+        platform: 'LeetCode',
+        difficulty: 'Hard',
+        topic: 'Arrays',
+        url: 'https://leetcode.com/problems/trapping-rain-water/',
+        notes: 'Two-pointer approach maintaining max_left and max_right for O(N) time and O(1) auxiliary space.',
+        solutionUrl: 'https://github.com/akashsinghkushwaha/dsa-solutions/tree/main/trapping-rain-water',
+      },
+      {
+        id: 'fp_4',
+        title: 'Word Break',
+        platform: 'LeetCode',
+        difficulty: 'Medium',
+        topic: 'Dynamic Programming',
+        url: 'https://leetcode.com/problems/word-break/',
+        notes: '1D DP boolean table recording segmented word validity across dictionary tokens.',
+        solutionUrl: 'https://github.com/akashsinghkushwaha/dsa-solutions/tree/main/word-break',
+      },
+    ],
+  };
+
+  const achievements: AchievementItem[] = [
+    {
+      id: 'ach_1',
+      title: 'West Zone Table Tennis Tournament Representative',
+      organization: 'JECRC Foundation & West Zone Inter-University',
+      category: 'Sports',
+      date: '2024 - 2025',
+      highlights: [
+        'Represented college at the official West Zone tournament',
+        'State-level table tennis player',
+        'Won 13 career medals (7 Gold, 5 Silver, 1 Bronze)',
+      ],
+      description:
+        'Decorated state-level table tennis athlete representing the college team at the competitive West Zone tournament. Accumulated 13 podium medals reflecting intense discipline, fast reflexes, and strategic resilience.',
+      visible: true,
+      order: 1,
+    },
+    {
+      id: 'ach_2',
+      title: '400+ Algorithmic Problems Solved Milestone',
+      organization: 'LeetCode & GeeksforGeeks',
+      category: 'Coding',
+      date: 'October 2026',
+      highlights: [
+        'Over 400 problems solved across LeetCode & GFG',
+        'Mastery in Arrays, Trees, Hashing, and Graphs',
+        'Strong problem-solving foundation in Java',
+      ],
+      description:
+        'Demonstrated continuous algorithmic rigor by solving 400+ competitive programming challenges with optimized time and space complexities.',
+      visible: true,
+      order: 2,
+    },
+    {
+      id: 'ach_3',
+      title: 'Delivered Commercial MERN E-Commerce Platform',
+      organization: 'Handloom House Client Project',
+      category: 'Technical',
+      date: 'November 2025',
+      highlights: [
+        '100+ product catalog managed in MongoDB',
+        '15+ secured RESTful API endpoints',
+        'Integrated Razorpay with HMAC-SHA256 signature verification',
+      ],
+      description:
+        'Successfully architected and deployed a production-grade e-commerce application for a paying client with custom inventory management and secure online payments.',
+      visible: true,
+      order: 3,
+    },
+    {
+      id: 'ach_4',
+      title: 'Pathlytic AI Mentoring Platform Launch',
+      organization: 'Independent Engineering Project',
+      category: 'Technical',
+      date: 'May 2026',
+      highlights: [
+        'Gemini structured API schema integration',
+        'Personalized roadmap synthesis with milestone tracking',
+        'Power BI visual analytics integration',
+      ],
+      description:
+        'Engineered an innovative AI-driven learning roadmap platform that turns ambiguous career goals into concrete weekly milestones for aspiring developers.',
+      visible: true,
+      order: 4,
+    },
+  ];
+
+  const certifications: CertificationItem[] = [
+    {
+      id: 'cert_1',
+      title: 'Core Java Programming Revisited',
+      issuer: 'Infosys Springboard',
+      issueDate: '2024',
+      verificationUrl: 'https://infyspringboard.onwingspan.com',
+      certificateUrl: '',
+      fileType: 'image',
+      status: 'published',
+      order: 1,
+    },
+  ];
+
+  const experiences: ExperienceItem[] = [
+    {
+      id: 'exp_1',
+      role: 'Full-Stack Developer — MERN Stack',
+      company: 'Handloom House',
+      employmentType: 'Client project / Freelance development',
+      period: 'August 2025 – November 2025',
+      location: 'Jaipur, India (Remote)',
+      description: 'Developed a production-ready e-commerce application for a paying client.',
+      responsibilities: [
+        'Designed and developed end-to-end application functionality using React, Node.js, Express, and MongoDB.',
+        'Implemented 15+ secure REST APIs with transactional integrity, indexing, and payload validation.',
+        'Integrated Razorpay payment gateway workflows with automated transaction logging.',
+        'Implemented HMAC-SHA256 payment signature verification on the server to prevent payment tampering.',
+        'Developed a route-protected administrative dashboard for catalog management and live order tracking.',
+      ],
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Razorpay', 'Tailwind CSS', 'JWT'],
+      status: 'published',
+      order: 1,
+    },
+  ];
+
+  const resume: ResumeData = {
+    fileName: 'Akash_Singh_Kushwaha_Resume.pdf',
+    url: '/api/public/resume/download',
+    lastUpdated: 'October 2026',
+    version: 'v2.4',
+    status: 'published',
+    fileSize: '184 KB',
+  };
+
+  const settings: SiteSettings = {
+    siteTitle: 'Akash Singh Kushwaha | Full-Stack Developer & AI Engineer',
+    heroTagline: 'Building products that solve real problems — from full-stack platforms to AI-powered applications.',
+    availabilityBadge: 'Open to Internships & Opportunities',
+    email: 'akashsinghkushwaha.it27@gmail.com',
+    phone: '+91-6376037378',
+    phonePublic: true,
+    githubUrl: 'https://github.com/akashsinghkushwaha',
+    linkedinUrl: 'https://linkedin.com/in/akashsinghkushwaha',
+    leetcodeUrl: 'https://leetcode.com/akashsinghkushwaha',
+    gfgUrl: 'https://geeksforgeeks.org/user/akashsinghkushwaha',
+    youtubeUrl: '',
+    sectionVisibility: {
+      about: true,
+      skills: true,
+      projects: true,
+      dsa: true,
+      achievements: true,
+      certifications: true,
+      experience: true,
+      resume: true,
+      contact: true,
+    },
+    sectionOrder: ['about', 'skills', 'projects', 'dsa', 'experience', 'achievements', 'certifications', 'resume', 'contact'],
+    maintenanceMode: false,
+    seoDescription:
+      'Official portfolio of Akash Singh Kushwaha — Full-Stack Developer, MERN Stack specialist, and AI application engineer. Explore featured projects, DSA metrics, achievements, and case studies.',
+  };
+
+  return {
+    adminUsers,
+    profile,
+    skills,
+    projects,
+    dsa,
+    achievements,
+    certifications,
+    experiences,
+    resume,
+    settings,
+  };
+};

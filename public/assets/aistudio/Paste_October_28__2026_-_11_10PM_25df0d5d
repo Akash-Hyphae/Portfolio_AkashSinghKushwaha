@@ -1,0 +1,1343 @@
+# PROJECT: AKASH SINGH KUSHWAHA — PREMIUM FULL-STACK DEVELOPER PORTFOLIO WITH COMPLETE ADMIN CMS
+
+Act as a senior full-stack software engineer, UI/UX designer, database architect, and security engineer.
+
+Build a complete, production-oriented, responsive personal portfolio website for **Akash Singh Kushwaha**, an Information Technology undergraduate, full-stack MERN developer, and aspiring AI engineer.
+
+This must be a real, functional full-stack application with a public portfolio, secure administrator dashboard, backend APIs, database persistence, file uploads, and contact management.
+
+Do not create merely a landing page, static mockup, or frontend-only demonstration. Implement the actual features, connect the frontend to the backend, and make the project straightforward to configure and deploy.
+
+First establish the complete application architecture. Then implement the application in logical stages, ensuring that existing working features are preserved as new features are added.
+
+---
+
+# 1. PERSONAL INFORMATION AND PORTFOLIO IDENTITY
+
+Use the following verified information as the initial portfolio content.
+
+Name: Akash Singh Kushwaha
+
+Professional headline:
+Full-Stack Developer | MERN Stack | AI-Powered Applications
+
+Alternative hero tagline:
+Building products that solve real problems — from full-stack platforms to AI-powered applications.
+
+Professional summary:
+Information Technology undergraduate with hands-on experience building and deploying full-stack applications using the MERN stack. Experienced in developing REST APIs, JWT authentication, payment integrations, database-driven applications, and AI-powered learning platforms. Strong foundation in Java, Data Structures and Algorithms, DBMS, and software engineering.
+
+Education:
+- Degree: B.Tech in Information Technology
+- Institution: Jaipur Engineering College and Research Center Foundation, Jaipur
+- Expected graduation: 2027
+- CGPA: 8.13/10
+
+Contact information:
+- Email: akashsinghkushwaha.it27@gmail.com
+- Phone: +91-6376037378
+
+Social profiles:
+- LinkedIn: Store the profile URL in the admin settings.
+- GitHub: Store the profile URL in the admin settings.
+- LeetCode: Store the profile URL in the admin settings.
+- GeeksforGeeks: Store the profile URL in the admin settings.
+- YouTube: Optional profile URL managed through admin settings.
+
+IMPORTANT:
+Do not invent profile URLs, work experience, client names, certifications, achievements, project metrics, testimonials, or coding statistics.
+
+Where information is unavailable, use an editable placeholder and allow the administrator to enter the correct information.
+
+Never display fabricated metrics as real achievements.
+
+---
+
+# 2. DESIGN SYSTEM AND VISUAL EXPERIENCE
+
+Create a visually impressive, premium, modern developer portfolio.
+
+Design inspiration:
+A combination of an award-winning developer portfolio, a premium SaaS landing page, and a polished developer workspace.
+
+Do not copy an existing website.
+
+## Theme
+
+Default theme: dark.
+
+Suggested colors:
+- Main background: #080B14
+- Secondary background: #101626
+- Card background: #131B2D
+- Primary accent: #7C5CFC
+- Secondary accent: #38BDF8
+- Main text: #F8FAFC
+- Secondary text: #A3AEC2
+- Border: subtle translucent white
+
+Use gradients sparingly.
+
+Implement:
+- Light and dark theme switching.
+- Consistent typography.
+- Generous spacing.
+- Rounded cards.
+- Subtle borders and shadows.
+- Smooth hover transitions.
+- Scroll-based reveal animations.
+- Elegant page transitions where appropriate.
+- Accessible color contrast.
+- Loading skeletons.
+- Empty states.
+- Error states.
+- Toast notifications.
+- Confirmation dialogs for destructive actions.
+
+Use Lucide icons and Framer Motion.
+
+Avoid excessive animations, distracting backgrounds, giant headings, unnecessary glow effects, and generic AI-generated website aesthetics.
+
+The result must look professional to recruiters and engineering managers.
+
+## Navigation
+
+Create a sticky navigation bar with:
+- Home
+- About
+- Skills
+- Projects
+- DSA
+- Achievements
+- Certifications
+- Resume
+- Contact
+
+Include:
+- My Resume button.
+- Theme toggle.
+- Mobile navigation drawer.
+- Active section indicator.
+- Smooth scrolling.
+
+Add an administrator login entry accessible through a small footer link or by navigating directly to /admin/login.
+
+Do not expose administrative controls in the public navigation.
+
+---
+
+# 3. HOME / HERO SECTION
+
+Create a compelling first screen.
+
+Left side:
+- Small availability badge with editable availability status.
+- Greeting: "Hi, I'm Akash."
+- Large heading: "Full-Stack Developer building meaningful digital experiences."
+- Short professional description.
+- Primary CTA: "Explore My Work".
+- Secondary CTA: "Download Resume".
+- Third CTA: "Contact Me".
+
+Right side:
+Create a sophisticated visual composition containing:
+- Developer profile image or initials-based avatar.
+- Floating technology badges for React, Node.js, MongoDB, Java, and AI.
+- Subtle animated geometric elements.
+- A terminal-inspired card with a short code snippet.
+
+Do not require an actual photograph. Allow the administrator to upload one later.
+
+Below the hero, create a statistics strip.
+
+Initial statistics:
+- 400+ DSA problems solved.
+- 3 featured projects.
+- 13 table tennis medals.
+- 2027 expected graduation.
+
+All statistics must be editable through the admin dashboard.
+
+For DSA statistics, allow the administrator to update the count and its last-updated date.
+
+Do not display invented experience durations or unverified professional statistics.
+
+---
+
+# 4. ABOUT SECTION
+
+Create a well-designed About Me section.
+
+Include:
+- Professional introduction.
+- Current education.
+- Areas of interest.
+- Career goals.
+- Personal interests.
+- A compact timeline.
+
+Areas of interest:
+- Full-stack web development.
+- AI-powered applications.
+- Backend engineering.
+- Problem-solving and algorithms.
+- Building useful products for real users.
+
+Personal interests:
+- Table tennis.
+- Gaming.
+- Learning new technologies.
+
+Allow the administrator to edit all text and reorder the content blocks.
+
+Use a two-column layout on desktop and a single-column layout on mobile.
+
+Add an editable "Currently Learning" subsection.
+
+---
+
+# 5. TECHNICAL SKILLS SECTION
+
+Build a dynamic skills section with categorized cards.
+
+Initialize the following categories.
+
+## Programming Languages
+- Java
+- JavaScript
+
+## Frontend Development
+- React.js
+- HTML5
+- CSS3
+- JavaScript ES6+
+- Tailwind CSS
+- Material UI
+
+## Backend Development
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+
+## Databases
+- MongoDB
+- MySQL
+- SQL
+
+## Core Computer Science
+- Data Structures and Algorithms
+- Object-Oriented Programming
+- Database Management Systems
+- Operating Systems
+
+## Tools and Platforms
+- Git
+- GitHub
+- Postman
+- Netlify
+- Render
+
+## AI and Integrations
+- Gemini API
+- AI-powered application development
+
+Only show technologies that the administrator confirms as skills.
+
+Allow administrators to:
+- Add and delete skills.
+- Edit skill names.
+- Change categories.
+- Upload icons or choose supported icons.
+- Set display order.
+- Feature selected skills.
+- Hide skills without deleting them.
+
+Do not assign arbitrary proficiency percentages to technologies. If proficiency labels are used, make them optional and administrator-controlled.
+
+---
+
+# 6. PROJECTS SECTION
+
+This is one of the most important sections.
+
+Create visually impressive project cards with dedicated project detail pages.
+
+Each project card should contain:
+- Cover image.
+- Project name.
+- Short description.
+- Technology badges.
+- Project category.
+- Live demo button.
+- GitHub button.
+- View case study button.
+
+The case study page should support:
+- Problem statement.
+- Project objectives.
+- Solution overview.
+- Main features.
+- Technical architecture.
+- Technology stack.
+- Important implementation decisions.
+- Challenges and solutions.
+- Screenshots.
+- Future improvements.
+- Live demo URL.
+- Source code URL.
+
+All content must come from the database.
+
+## Project 1: Handloom House
+
+Title:
+Handloom House — Full-Stack E-commerce Platform
+
+Category:
+Full-Stack Development
+
+Technologies:
+React, Node.js, Express.js, MongoDB, Razorpay.
+
+Description:
+A production-ready MERN e-commerce application developed for a paying client, supporting product catalog management, dynamic filtering, cart operations, order management, and online payments.
+
+Verified features:
+- Support for a catalog of 100+ products.
+- 15+ Express.js REST APIs.
+- MongoDB-backed application data.
+- Razorpay payment integration.
+- HMAC-SHA256 signature verification.
+- Route-protected administrative dashboard.
+- Order tracking.
+
+Initial project period:
+August 2025 – November 2025.
+
+Show this project as client work.
+
+Do not disclose the client's identity or payment amount unless added explicitly by the administrator.
+
+## Project 2: Play4Glory
+
+Title:
+Play4Glory — Esports Tournament Management Platform
+
+Category:
+Full-Stack Development / Gaming
+
+Technologies:
+MongoDB, Express.js, React, Node.js, JWT, Razorpay.
+
+Description:
+A full-stack esports platform designed to manage tournaments, teams, match progression, digital wallet operations, and tournament scoring.
+
+Verified features:
+- Dual-portal application.
+- JWT authentication.
+- Role-Based Access Control.
+- Automated 64-team knockout bracket generation.
+- Recursive match-tree logic.
+- Digital wallet and transaction ledger.
+- Razorpay deposit verification.
+- Administrative UPI withdrawal approvals.
+- MVP leaderboard calculations.
+
+Project period:
+December 2025 – Present.
+
+Allow screenshots and demonstration links to be added through admin.
+
+Do not represent unfinished integrations as completed.
+
+## Project 3: Pathlytic AI
+
+Title:
+Pathlytic AI — AI-Powered Learning and Career Roadmaps
+
+Category:
+Artificial Intelligence / Full-Stack Development.
+
+Technologies:
+MERN stack, Gemini API, Power BI.
+
+Description:
+An AI-powered mentoring platform that generates personalized learning roadmaps based on career goals, academic background, skill confidence, and deadlines.
+
+Verified features:
+- Personalized week-by-week learning roadmaps.
+- Gemini API integration.
+- Multi-step onboarding wizard.
+- MongoDB-backed application data.
+- Progress dashboard.
+- Task completion tracking.
+- Experience points tracking.
+- Analytics integration with Power BI.
+
+Project period:
+May 2026 – Present.
+
+Allow the administrator to add additional projects without changing code.
+
+## Project management requirements
+
+Provide:
+- Search by project name.
+- Filter by technology and category.
+- Sort by newest, oldest, or featured.
+- Featured project display.
+- Draft and published states.
+- Drag-and-drop display ordering.
+- Project visibility controls.
+- Project image uploads.
+- Dedicated project slugs.
+- SEO metadata per project.
+
+Never hardcode the projects directly into the React components.
+
+---
+
+# 7. DSA AND PROBLEM-SOLVING SECTION
+
+Create a dedicated section that showcases my problem-solving journey.
+
+Initial verified information:
+400+ DSA problems solved across LeetCode and GeeksforGeeks.
+
+Allow the administrator to update:
+- Total problems solved.
+- LeetCode solved count.
+- GeeksforGeeks solved count.
+- Coding profile URLs.
+- Last-updated date.
+- Featured problems.
+- Topics being studied.
+
+Do not invent platform-specific solved counts.
+
+The total count should be manually manageable. If platform-specific counts are entered, validate that the combined statistics are consistent or clearly label the total as manually maintained.
+
+## Topic categories
+
+Provide optional topic cards for:
+- Arrays.
+- Strings.
+- Hashing.
+- Binary Search.
+- Recursion.
+- Backtracking.
+- Linked Lists.
+- Stacks and Queues.
+- Trees.
+- Graphs.
+- Dynamic Programming.
+- Greedy Algorithms.
+- Heaps.
+- Tries.
+
+Each topic should support:
+- Topic name.
+- Problems completed.
+- Total target problems.
+- Progress percentage, calculated from the counts.
+- Study status.
+- Personal notes.
+
+Initialize topics without fabricated completion counts.
+
+## Featured problems
+
+Allow manual addition of:
+- Problem title.
+- Platform.
+- Problem URL.
+- Difficulty.
+- Topic.
+- Personal notes.
+- Solution repository URL.
+
+Create an attractive problem-solving dashboard with progress bars and charts.
+
+Include links to coding profiles.
+
+Do not scrape external platforms or pretend to have live synchronized statistics. External API integration should only be added when a legitimate, supported data source is configured.
+
+---
+
+# 8. ACHIEVEMENTS SECTION
+
+Display the following verified achievements.
+
+## Table Tennis
+
+- Won 13 medals.
+- 7 Gold medals.
+- 5 Silver medals.
+- 1 Bronze medal.
+- Represented the college at the West Zone tournament.
+- State-level table tennis player.
+
+Create a visually appealing achievement card with a sports-inspired accent.
+
+Allow achievement images, event details, dates, and descriptions to be managed through admin.
+
+## Technical Achievements
+
+- Solved 400+ DSA problems across LeetCode and GeeksforGeeks.
+- Developed a full-stack e-commerce application for a paying client.
+- Built an AI-powered career mentoring application.
+
+Distinguish between awards, competition participation, coding milestones, and project accomplishments.
+
+Do not create fake trophies, awards, rankings, or competition results.
+
+---
+
+# 9. CERTIFICATIONS SECTION
+
+Create a certification gallery.
+
+Initialize the following verified certification entry:
+
+Certification name:
+Core Java Programming Revisited
+
+Issuing organization:
+Infosys Springboard
+
+Certificate image/PDF:
+Allow the administrator to upload the actual certificate.
+
+Certificate URL:
+Editable.
+
+Completion date:
+Optional and editable.
+
+Display:
+- Certificate title.
+- Issuing organization.
+- Completion date, if provided.
+- Certificate image.
+- View Certificate button.
+- Verification link, if provided.
+
+Administrators must be able to add, edit, hide, reorder, and delete certifications.
+
+Do not fabricate certificate IDs, certificate verification URLs, or completion dates.
+
+Support PDF and image certificates with appropriate previews.
+
+---
+
+# 10. EXPERIENCE SECTION
+
+Create a professional experience timeline.
+
+Initialize a Handloom House entry using the verified information from the resume.
+
+Role:
+Full-Stack Developer — MERN Stack
+
+Type:
+Client project / Freelance development.
+
+Period:
+August 2025 – November 2025.
+
+Description:
+Developed a production-ready e-commerce application for a paying client.
+
+Responsibilities:
+- Designed and developed application functionality.
+- Implemented REST APIs.
+- Integrated Razorpay payment workflows.
+- Implemented payment signature verification.
+- Developed protected administrative functionality.
+- Implemented order management and tracking.
+
+Keep the experience entry editable.
+
+Do not invent employers, employment arrangements, salary details, or additional work experience.
+
+Allow future internships and professional experience to be added from admin.
+
+---
+
+# 11. RESUME SECTION
+
+Create a premium resume section.
+
+Include:
+- A PDF preview when supported.
+- Download Resume button.
+- Open in New Tab button.
+- Resume last-updated date.
+- Optional resume version label.
+
+The administrator must be able to upload a replacement PDF.
+
+Store the PDF using the configured file storage provider.
+
+Keep only the currently published resume visible to visitors, unless an archive is explicitly enabled.
+
+Validate uploaded files by file type and size.
+
+Do not generate a fake resume.
+
+Initialize the section with the supplied resume once it has been uploaded through the configured admin workflow.
+
+The PDF must be downloadable without exposing any administrative credentials or private configuration.
+
+---
+
+# 12. CONTACT SECTION
+
+Build a complete contact section.
+
+Display:
+- Email address.
+- Phone number, with a configurable public visibility toggle.
+- LinkedIn.
+- GitHub.
+- Optional other social profiles.
+
+Create a working contact form with:
+- Full name.
+- Email address.
+- Subject.
+- Message.
+- Consent checkbox where appropriate.
+
+Implement:
+- Client-side validation.
+- Server-side validation.
+- Email format validation.
+- Input sanitization.
+- Rate limiting.
+- Spam protection.
+- Success and error notifications.
+- Loading states.
+- Duplicate submission protection where appropriate.
+
+Save valid messages in MongoDB.
+
+If email delivery is configured, send a notification to the portfolio owner's configured email address.
+
+Use a supported email provider configured through environment variables.
+
+Do not claim that an email was sent unless the provider confirms success.
+
+If email delivery is unavailable, still save the message and clearly show the visitor that their message was received.
+
+Never expose email provider credentials in frontend code.
+
+---
+
+# 13. ADMIN DASHBOARD — COMPLETE CONTENT MANAGEMENT SYSTEM
+
+Build a separate administrative interface at:
+
+/admin/login
+
+After successful authentication, redirect to:
+
+/admin/dashboard
+
+The dashboard must be fully functional and connected to the same backend and database used by the public portfolio.
+
+Do not build a fake dashboard with nonfunctional buttons.
+
+## Admin dashboard overview
+
+Display:
+- Published projects.
+- Draft projects.
+- Total DSA problems.
+- Published certifications.
+- Total contact messages.
+- Unread messages.
+- Current resume version.
+- Recent administrative activity.
+
+Use real database values.
+
+Do not display invented analytics.
+
+## A. Profile Manager
+
+Allow administrators to edit:
+- Name.
+- Professional headline.
+- About section.
+- Professional summary.
+- Email.
+- Phone.
+- Profile image.
+- Location, if desired.
+- Availability status.
+- Social profile URLs.
+- Hero CTA labels.
+- Currently learning.
+- Public visibility settings.
+
+## B. Skills Manager
+
+Allow:
+- Creating skills.
+- Editing skills.
+- Changing categories.
+- Reordering.
+- Uploading icons.
+- Hiding or showing skills.
+- Deleting skills with confirmation.
+
+## C. Projects Manager
+
+Allow:
+- Creating projects.
+- Editing projects.
+- Uploading cover images.
+- Uploading gallery images.
+- Editing descriptions.
+- Managing technologies.
+- Managing project links.
+- Editing case studies.
+- Marking projects as featured.
+- Publishing and unpublishing.
+- Saving drafts.
+- Previewing changes.
+- Reordering projects.
+- Deleting projects.
+
+## D. DSA Manager
+
+Allow:
+- Updating the total problem count.
+- Managing platform-specific counts.
+- Editing coding profile links.
+- Managing topic progress.
+- Adding featured problems.
+- Editing study notes.
+- Updating the last-updated date.
+
+## E. Achievements Manager
+
+Allow:
+- Adding achievements.
+- Editing descriptions.
+- Uploading supporting images.
+- Entering dates.
+- Selecting achievement categories.
+- Reordering and hiding achievements.
+
+## F. Certifications Manager
+
+Allow:
+- Uploading certificate images and PDFs.
+- Editing certificate information.
+- Adding verification URLs.
+- Changing display order.
+- Publishing and unpublishing entries.
+
+## G. Resume Manager
+
+Allow:
+- Uploading a new PDF.
+- Previewing the uploaded PDF.
+- Replacing the current resume.
+- Editing version information.
+- Updating the last-modified date.
+- Publishing the new version.
+
+Validate the uploaded file before replacing the currently published resume.
+
+## H. Experience Manager
+
+Allow:
+- Creating experience entries.
+- Editing role and company/client display name.
+- Setting dates.
+- Editing responsibilities.
+- Managing technologies.
+- Ordering entries.
+- Hiding or publishing entries.
+
+## I. Contact Inbox
+
+Build a real message inbox.
+
+Features:
+- Message list.
+- Search.
+- Filter by read/unread.
+- Filter by date.
+- Message details.
+- Mark as read.
+- Mark as unread.
+- Archive.
+- Delete with confirmation.
+- Reply using an external email client or configured email integration.
+
+If reply-by-email is implemented, make it clear whether a message is actually sent or merely opens an email application.
+
+## J. Site Settings
+
+Manage:
+- Website title.
+- Logo.
+- Favicon.
+- Theme defaults.
+- Contact information.
+- Social links.
+- Footer text.
+- SEO title and description.
+- Open Graph image.
+- Public contact details.
+- Section visibility.
+- Section order.
+- Hero content.
+- Maintenance mode.
+- Analytics configuration.
+
+Do not let maintenance mode lock the administrator out.
+
+## K. Admin Account Settings
+
+Provide:
+- Change password.
+- Logout.
+- Session status.
+- Recent login information where appropriate.
+
+A single authorized administrator is sufficient initially.
+
+Do not allow anonymous users to register as administrators.
+
+---
+
+# 14. ADMIN AUTHENTICATION AND SECURITY
+
+Security is mandatory.
+
+Implement:
+- Secure server-side authentication.
+- Password hashing using Argon2id or bcrypt.
+- Secure, HTTP-only cookies.
+- SameSite cookie protection.
+- HTTPS in production.
+- CSRF protection where applicable.
+- Login rate limiting.
+- Server-side authorization middleware.
+- Input validation.
+- File upload validation.
+- Request size limits.
+- Secure error handling.
+- Environment variable configuration.
+- Restricted CORS configuration.
+- Appropriate security headers.
+
+Never rely on hiding admin buttons in React as an authorization mechanism.
+
+Every administrative API endpoint must independently verify the authenticated administrator.
+
+Never store plaintext passwords.
+
+Never expose database credentials, signing keys, email credentials, or storage API secrets in client-side code.
+
+Do not hardcode default administrator credentials in source code.
+
+Create a secure initial administrator provisioning process using environment variables or a protected one-time setup command.
+
+Disable public administrator registration.
+
+Protect the following route families:
+
+- /api/admin/*
+- /api/profile/*
+- /api/projects/*
+- /api/skills/*
+- /api/achievements/*
+- /api/certifications/*
+- /api/experience/*
+- /api/resume/*
+- /api/dsa/*
+- /api/settings/*
+- /api/contact/admin/*
+
+Use appropriate public GET endpoints for content that visitors are allowed to see.
+
+Public visitors must never be able to create, edit, publish, or delete portfolio content.
+
+Contact form submission is the exception: visitors may submit a validated message through a dedicated public endpoint.
+
+Do not assume that a route is protected merely because its frontend page requires login.
+
+---
+
+# 15. DATABASE DESIGN
+
+Use MongoDB with Mongoose.
+
+Design separate collections or appropriate schemas for:
+
+1. AdminUsers
+2. Profile
+3. Skills
+4. Projects
+5. Achievements
+6. Certifications
+7. Experiences
+8. DSAStatistics
+9. DSATopics
+10. FeaturedProblems
+11. ContactMessages
+12. SiteSettings
+13. AdminActivityLogs
+
+Use consistent schema validation.
+
+Include:
+- Created timestamps.
+- Updated timestamps.
+- Appropriate indexes.
+- Unique constraints where needed.
+- Safe defaults.
+- Data validation.
+- Slug uniqueness for projects.
+- Draft and published states where appropriate.
+- Soft deletion only where useful.
+
+Create database initialization or seeding functionality for the initial portfolio content.
+
+Seeding must be idempotent: running it again should not create duplicate projects or duplicate administrator accounts.
+
+Never overwrite existing administrator credentials or user-created content during ordinary application startup.
+
+Store images and PDFs in a dedicated file storage provider. Store their metadata and URLs in MongoDB rather than placing large files directly inside database documents.
+
+Use environment variables for all credentials and external service configuration.
+
+---
+
+# 16. BACKEND API REQUIREMENTS
+
+Create a clean, maintainable REST API.
+
+Suggested route structure:
+
+Authentication:
+- POST /api/auth/login
+- POST /api/auth/logout
+- GET /api/auth/me
+- POST /api/auth/change-password
+
+Public portfolio:
+- GET /api/public/profile
+- GET /api/public/skills
+- GET /api/public/projects
+- GET /api/public/projects/:slug
+- GET /api/public/achievements
+- GET /api/public/certifications
+- GET /api/public/experience
+- GET /api/public/dsa
+- GET /api/public/settings
+- POST /api/public/contact
+
+Administration:
+- GET /api/admin/dashboard
+- CRUD operations for projects.
+- CRUD operations for skills.
+- CRUD operations for achievements.
+- CRUD operations for certifications.
+- CRUD operations for experience.
+- CRUD operations for DSA statistics and topics.
+- CRUD operations for featured problems.
+- CRUD operations for site settings.
+- GET and PATCH operations for profile content.
+- GET and PATCH operations for resume metadata.
+- Contact inbox management endpoints.
+- Upload and file-management endpoints.
+
+Use appropriate HTTP status codes and consistent JSON response structures.
+
+Validate IDs and request payloads.
+
+Handle invalid requests gracefully.
+
+Avoid exposing internal stack traces or sensitive database errors to the public.
+
+Use pagination for administrative lists that can grow over time.
+
+Implement search and filtering on the server when appropriate.
+
+---
+
+# 17. FRONTEND ARCHITECTURE
+
+Use React, TypeScript, Vite, and Tailwind CSS.
+
+Organize the application into reusable components.
+
+Suggested structure:
+
+client/
+  src/
+    components/
+      layout/
+      navigation/
+      hero/
+      about/
+      skills/
+      projects/
+      dsa/
+      achievements/
+      certifications/
+      experience/
+      resume/
+      contact/
+      admin/
+      ui/
+    pages/
+      HomePage.tsx
+      ProjectDetailsPage.tsx
+      AdminLoginPage.tsx
+      AdminDashboardPage.tsx
+      NotFoundPage.tsx
+    services/
+      api.ts
+    hooks/
+    contexts/
+    types/
+    utils/
+
+server/
+  src/
+    config/
+    models/
+    routes/
+    controllers/
+    middleware/
+    services/
+    validators/
+    utils/
+    scripts/
+    app.ts
+    server.ts
+
+Adapt the structure if the environment requires a different arrangement, but preserve clear separation between frontend, backend, and data access.
+
+Use:
+- React Router.
+- Reusable form components.
+- Typed API responses.
+- A centralized API client.
+- A centralized error-handling strategy.
+- Loading and empty states.
+- Protected admin routes for user experience.
+- Server-side authorization for actual security.
+
+Avoid giant components and duplicated business logic.
+
+Do not put the entire application in one file.
+
+Use accessible semantic HTML.
+
+Ensure all navigation links and buttons perform their intended actions.
+
+---
+
+# 18. CONTENT MANAGEMENT AND PUBLISHING WORKFLOW
+
+Implement a reliable content workflow.
+
+Every manageable content type should support draft and published states where appropriate.
+
+Expected workflow:
+
+1. Administrator logs in.
+2. Opens a management page.
+3. Creates or edits content.
+4. Saves a draft.
+5. Previews the content.
+6. Publishes it.
+7. The public portfolio retrieves the updated content from the backend.
+8. The change persists after refresh and redeployment.
+
+Unpublished content must not appear in public API responses.
+
+Deleting a project must not accidentally delete unrelated content.
+
+Validate uploaded files before publication.
+
+When the administrator changes section visibility or order, the public website must reflect that change.
+
+Implement sensible caching or revalidation so updates become visible without unnecessarily reloading the entire application.
+
+---
+
+# 19. RESPONSIVENESS AND ACCESSIBILITY
+
+The website must work on:
+- Desktop computers.
+- Laptops.
+- Tablets.
+- Mobile phones.
+
+Implement:
+- Responsive navigation.
+- Responsive project grids.
+- Readable typography.
+- Touch-friendly buttons.
+- Responsive admin tables.
+- Mobile-friendly forms.
+- Responsive dashboard cards.
+- Appropriate image sizing.
+- Keyboard navigation.
+- Visible focus states.
+- Accessible form labels.
+- Alt text for meaningful images.
+- Reduced-motion support.
+
+Do not let large code snippets, tables, or images create horizontal overflow.
+
+Test layouts at approximately 375px, 768px, 1024px, and 1440px viewport widths.
+
+---
+
+# 20. SEO AND PERFORMANCE
+
+Implement:
+- Page titles.
+- Meta descriptions.
+- Canonical URLs when configured.
+- Open Graph metadata.
+- Project-specific SEO metadata.
+- Sitemap generation.
+- robots.txt.
+- Descriptive URLs.
+- Optimized images.
+- Lazy loading for below-the-fold images.
+- Appropriate caching.
+- Code splitting where useful.
+- Accessible page structure.
+
+Provide a suitable default title:
+
+Akash Singh Kushwaha | Full-Stack Developer & AI Engineer
+
+Use configurable site URLs rather than inventing a production domain.
+
+Do not expose admin pages in the public sitemap.
+
+Use a suitable noindex policy for authentication and private administrative pages.
+
+Do not make unsupported claims about guaranteed search rankings.
+
+---
+
+# 21. DEPLOYMENT AND ENVIRONMENT CONFIGURATION
+
+Prepare the project for deployment.
+
+Recommended deployment:
+- Frontend: Netlify or Vercel.
+- Backend: Render.
+- Database: MongoDB Atlas.
+- File storage: Cloudinary or a configurable equivalent.
+- Email: A configurable transactional email provider.
+
+Provide:
+- README.md.
+- Frontend setup instructions.
+- Backend setup instructions.
+- Database setup instructions.
+- Environment variable documentation.
+- Database seeding instructions.
+- Admin provisioning instructions.
+- Local development commands.
+- Production build commands.
+- Deployment instructions.
+- CORS configuration instructions.
+- File storage configuration instructions.
+- Email integration instructions.
+
+Create an .env.example file containing variable names and placeholder values only.
+
+Potential variables include:
+
+NODE_ENV=
+PORT=
+CLIENT_URL=
+MONGODB_URI=
+SESSION_SECRET=
+ADMIN_EMAIL=
+ADMIN_PASSWORD_HASH=
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+EMAIL_PROVIDER_API_KEY=
+CONTACT_NOTIFICATION_EMAIL=
+PUBLIC_SITE_URL=
+
+Use the correct variables for the authentication and storage implementation you choose. Do not require unused variables.
+
+Never put secret values in .env.example.
+
+Never expose private environment variables through Vite's public environment configuration.
+
+Do not commit .env files.
+
+Explain that external services must be configured before their associated features can work in production.
+
+---
+
+# 22. TESTING AND QUALITY ASSURANCE
+
+Create meaningful tests for important functionality.
+
+Test at least:
+- Administrator login.
+- Invalid login attempts.
+- Unauthorized admin API access.
+- Project creation.
+- Project editing.
+- Draft and published visibility.
+- Skill management.
+- Certification management.
+- Resume upload validation.
+- Contact form validation.
+- Contact message persistence.
+- Public API responses.
+- Database errors.
+- Invalid project slugs.
+
+Add tests for core backend validation and authorization.
+
+Verify that public users cannot modify administrative resources.
+
+Run the available build and test commands.
+
+Fix TypeScript errors, broken imports, invalid routes, and runtime errors before declaring the implementation complete.
+
+Do not claim tests passed unless they were actually run successfully.
+
+---
+
+# 23. IMPLEMENTATION RULES
+
+Follow these rules throughout development:
+
+1. Build a complete application, not a static prototype.
+2. Keep the public website and admin dashboard visually consistent.
+3. Use real API calls and database persistence.
+4. Never use localStorage as the authoritative database for portfolio content.
+5. Do not hardcode projects and skills into UI components.
+6. Do not fabricate content or achievements.
+7. Never expose administrative credentials.
+8. Never leave important buttons nonfunctional.
+9. Do not replace real backend logic with simulated success messages.
+10. Include validation and error handling.
+11. Preserve working features when making changes.
+12. Keep the project maintainable and easy to extend.
+13. Provide useful error messages without leaking secrets.
+14. If an external service is unavailable, explain the configuration needed instead of pretending the integration works.
+15. If a requested feature cannot be implemented in the current environment, clearly identify the limitation and provide a working alternative.
+
+Do not stop after generating the hero section.
+
+Do not stop after building the public pages.
+
+Complete the admin dashboard, backend, database models, authentication, CRUD operations, contact management, and deployment documentation.
+
+---
+
+# 24. FINAL ACCEPTANCE CHECKLIST
+
+Before considering the project complete, verify the following.
+
+PUBLIC WEBSITE
+[ ] Premium visual design.
+[ ] Responsive navigation.
+[ ] Home and About sections.
+[ ] Skills loaded from the database.
+[ ] Projects loaded from the database.
+[ ] Working project detail pages.
+[ ] DSA statistics and topics.
+[ ] Achievements.
+[ ] Certifications.
+[ ] Experience.
+[ ] Resume preview and download.
+[ ] Functional contact form.
+[ ] Working theme toggle.
+[ ] Footer and social links.
+[ ] Loading, error, and empty states.
+
+ADMIN DASHBOARD
+[ ] Secure administrator login.
+[ ] Logout functionality.
+[ ] Dashboard overview with real statistics.
+[ ] Profile editor.
+[ ] Skills CRUD.
+[ ] Projects CRUD.
+[ ] DSA management.
+[ ] Achievements CRUD.
+[ ] Certifications CRUD.
+[ ] Experience CRUD.
+[ ] Resume upload and replacement.
+[ ] Contact inbox.
+[ ] Site settings.
+[ ] Section visibility controls.
+[ ] Content ordering.
+[ ] Draft and publish workflow.
+[ ] File upload validation.
+[ ] Changes persist after refresh.
+
+BACKEND AND SECURITY
+[ ] Database connection works.
+[ ] Models and validation are implemented.
+[ ] Public APIs return published content only.
+[ ] Admin APIs require authentication.
+[ ] Passwords are securely handled.
+[ ] Unauthorized modifications are rejected.
+[ ] Contact messages persist.
+[ ] Environment variables are documented.
+[ ] No secrets are exposed to the browser.
+
+DEPLOYMENT
+[ ] README is complete.
+[ ] .env.example is present.
+[ ] Build commands are documented.
+[ ] Deployment instructions are documented.
+[ ] Database seeding is documented.
+[ ] Admin provisioning is documented.
+[ ] External service configuration is documented.
+
+---
+
+# 25. START BUILDING NOW
+
+Begin by establishing the application structure and identifying the requirements of the current Google AI Studio environment.
+
+Then implement the application in these stages:
+
+Stage 1: Design system, navigation, responsive public portfolio, and initial content.
+
+Stage 2: Database schemas, backend APIs, validation, and database seeding.
+
+Stage 3: Secure admin authentication and dashboard layout.
+
+Stage 4: Complete CRUD operations for all portfolio content.
+
+Stage 5: File uploads, resume management, and contact inbox.
+
+Stage 6: Security hardening, error handling, responsive refinements, and testing.
+
+Stage 7: README, environment configuration, and deployment instructions.
+
+Keep the implementation coherent across stages. Reuse the same data models, API contracts, authentication strategy, and design system throughout.
+
+If you need to choose between a visually impressive mockup and a working feature, prioritize the working feature while maintaining high design quality.
+
+**The final result should be a premium, deployable developer portfolio with a genuinely functional, secure, database-backed admin dashboard that allows me to manage almost every aspect of my website without editing code.**
